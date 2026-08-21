@@ -1,4 +1,4 @@
-# MSFT Hackathon 2026
+# Microsoft Hackathon 2026
 
 ### Challenge: Collaboration using GitHub Planning & Tracking Tools in the Agentic Age
 
