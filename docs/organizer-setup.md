@@ -9,9 +9,9 @@ Notes for whoever is running the hackathon. Participants don't need to read this
 | Ideas & Submissions board | <https://github.com/users/reneexeener/projects/59> |
 | Issue forms | `.github/ISSUE_TEMPLATE/` |
 | Auto-add workflow | `.github/workflows/add-to-project.yml` |
-| Labels | `type: *`, `track: *`, `status: *`, `needs: triage` |
+| Labels | `type: *`, `theme: *`, `status: *`, `needs: triage` |
 
-The board has custom fields **Submission type**, **Track**, **Team**, **Effort**, **Code repo**, and
+The board has custom fields **Submission type**, **Theme**, **Team**, **Effort**, **Code repo**, and
 **Demo link**, plus a **Status** field customised to the hackathon flow (💡 Idea submitted → ✅ Triaged →
 🙋 Claimed by team → 🚧 In progress → 📦 Submitted → 🏆 Judged).
 
@@ -82,7 +82,7 @@ gh issue list --repo reneexeener/msft-hackathon-2026 --label "type: example" --j
 
 ## During the event
 
-**Daily triage.** Filter the board by `Status: 💡 Idea submitted`, then for each item: set **Track**
+**Daily triage.** Filter the board by `Status: 💡 Idea submitted`, then for each item: set **Theme**
 and **Effort**, move it to `✅ Triaged`, and swap the `needs: triage` label for `status: looking-for-team`
 or `status: claimed`.
 
@@ -91,9 +91,9 @@ or `status: claimed`.
 | View | Filter | Group by |
 | --- | --- | --- |
 | Triage queue | `label:"needs: triage"` | Submission type |
-| Ideas up for grabs | `label:"status: looking-for-team"` | Track |
+| Ideas up for grabs | `label:"status: looking-for-team"` | Theme |
 | Team progress | `-no:Team` | Team |
-| Judging | `label:"type: project-submission"` | Track |
+| Judging | `label:"type: project-submission"` | Theme |
 
 **Handy commands:**
 
@@ -101,9 +101,9 @@ or `status: claimed`.
 # Everything still awaiting triage
 gh issue list --repo reneexeener/msft-hackathon-2026 --label "needs: triage"
 
-# Idea count per track
+# Idea count per theme
 for t in planning-and-tracking agentic-workflows automation insights-and-metrics onboarding-and-docs accessibility-and-inclusion; do
-  printf "%-30s %s\n" "$t" "$(gh issue list --repo reneexeener/msft-hackathon-2026 --label "track: $t" --state all --json number --jq 'length')"
+  printf "%-30s %s\n" "$t" "$(gh issue list --repo reneexeener/msft-hackathon-2026 --label "theme: $t" --state all --json number --jq 'length')"
 done
 
 # All final submissions with their links

@@ -36,10 +36,12 @@ body:
       required: true
 
   - type: dropdown
-    id: track
+    id: theme
     attributes:
-      label: Track
-      description: Which theme does this fit best? Pick the closest — organizers can adjust it.
+      label: Theme (optional)
+      description: |
+        Roughly what is this about? Only used for grouping the board — pick whatever's closest,
+        or skip it. There's no wrong answer and nothing is judged on it.
       options:
         - Planning & tracking (Issues, Projects, milestones, roadmaps)
         - Agentic workflows (Copilot coding agent, AI-assisted planning and triage)
@@ -47,9 +49,9 @@ body:
         - Insights & metrics (dashboards, reporting, project analytics)
         - Onboarding & docs (getting new contributors productive fast)
         - Accessibility & inclusion (collaboration that works for everyone)
-        - Other / not sure yet
+        - Something else — I've described it above
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: agentic_angle
@@ -59,7 +61,7 @@ body:
         The challenge is about the *agentic age*, so tell us where an AI agent does real work.
         It's fine to answer "not sure yet" — say so and we'll help you shape it.
       placeholder: |
-        Copilot reads the discussion thread, drafts issues with acceptance criteria, assigns a track
+        Copilot reads the discussion thread, drafts issues with acceptance criteria, assigns a theme
         label, and opens a draft PR for the ones that are mechanical. A human approves before anything merges.
     validations:
       required: true

@@ -2,8 +2,9 @@
 
 ### Challenge: Collaboration using GitHub Planning & Tracking Tools in the Agentic Age
 
-Welcome! 👋 This repository is the home base for the hackathon. It's where every idea gets
-submitted, where the project board lives, and where teams hand in their final projects.
+Welcome! 👋 This repository is the home base for **one of the three hackathon challenges**. It's where
+ideas for this challenge get submitted, where the project board lives, and where teams hand in their
+final projects.
 
 **➡️ [Submit an idea](../../issues/new?template=1-challenge-idea.yml) · [See the board](https://github.com/users/reneexeener/projects/59) · [Browse all ideas](../../issues?q=is%3Aissue+label%3A%22type%3A+idea%22)**
 
@@ -20,11 +21,13 @@ the GraphQL API) together with AI agents.
 That's deliberately broad. A dashboard, a bot, a workflow, a Copilot extension, a genuinely better
 board layout — all fair game.
 
-### Tracks
+### Some themes to get you started
 
-Pick the one that fits best when you submit; it's only used for grouping and browsing.
+These are **prompts, not categories.** They exist because a blank page is hard, not because your idea
+has to fit one of them. If yours sits between two of them, or somewhere else entirely, that's a good
+sign — pick the closest when you submit (or skip it) and describe what you actually mean in the issue.
 
-| Track | What it covers |
+| Theme | Things it might look like |
 | --- | --- |
 | 🗂️ **Planning & tracking** | Issues, Projects, milestones, roadmaps, estimation |
 | 🤖 **Agentic workflows** | Copilot coding agent, AI-assisted planning, triage, review |
@@ -32,6 +35,9 @@ Pick the one that fits best when you submit; it's only used for grouping and bro
 | 📊 **Insights & metrics** | Dashboards, reporting, velocity, project analytics |
 | 📚 **Onboarding & docs** | Getting new contributors productive fast |
 | ♿ **Accessibility & inclusion** | Collaboration that works for everyone |
+
+The theme is only used for grouping and browsing the board. Nothing is judged on it, and nobody will
+tell you your idea is in the wrong one.
 
 ---
 
@@ -47,8 +53,9 @@ Even if you already know what you're building, submit it. Two reasons:
 2. Every idea goes into a shared pool. Ideas nobody has time to build are up for grabs — and we keep
    the pool for next year.
 
-Rough ideas are welcome. You'll be asked what problem it solves, which track it fits, and where an
-agent does real work. "Not sure yet" is a valid answer to that last one — organizers will help shape it.
+Rough ideas are welcome. You'll be asked what problem it solves, roughly which theme it's closest to,
+and where an agent does real work. "Not sure yet" is a valid answer to that last one — organizers will
+help shape it.
 
 ### 2. Build it 🔨 *(during the hackathon)*
 
@@ -85,8 +92,8 @@ Items move through these statuses:
 | 📦 Submitted | Handed in for judging |
 | 🏆 Judged | Judges have reviewed it |
 
-Alongside Status, each item has **Submission type**, **Track**, **Team**, **Effort**, and — for finished
-projects — **Code repo** and **Demo link**. Try grouping the board by Track or Team to see how the same
+Alongside Status, each item has **Submission type**, **Theme**, **Team**, **Effort**, and — for finished
+projects — **Code repo** and **Demo link**. Try grouping the board by Theme or Team to see how the same
 items tell different stories.
 
 ### Adopting someone else's idea
@@ -105,7 +112,7 @@ assign you and flip it to `status: claimed`. Credit the original author in your 
 | `type: project-submission` | A team's final submission |
 | `type: team-task` | Work item a team is tracking |
 | `type: example` | Seeded by organizers as an example — please don't edit these |
-| `track: *` | Which theme the item belongs to |
+| `theme: *` | Roughly what the item is about — a browsing aid, nothing more |
 | `status: looking-for-team` | Unclaimed — any team may adopt it |
 | `status: claimed` | A team is on it |
 | `needs: triage` | Waiting on organizer review |

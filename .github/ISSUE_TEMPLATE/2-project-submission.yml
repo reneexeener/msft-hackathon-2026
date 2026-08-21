@@ -47,9 +47,10 @@ body:
       required: true
 
   - type: dropdown
-    id: track
+    id: theme
     attributes:
-      label: Track
+      label: Theme (optional)
+      description: Just for grouping the board — pick the closest, or skip it.
       options:
         - Planning & tracking (Issues, Projects, milestones, roadmaps)
         - Agentic workflows (Copilot coding agent, AI-assisted planning and triage)
@@ -57,9 +58,9 @@ body:
         - Insights & metrics (dashboards, reporting, project analytics)
         - Onboarding & docs (getting new contributors productive fast)
         - Accessibility & inclusion (collaboration that works for everyone)
-        - Other
+        - Something else
     validations:
-      required: true
+      required: false
 
   - type: input
     id: repo
@@ -87,7 +88,7 @@ body:
         This is the heart of the challenge, so be specific. Which agent or model, doing what,
         with a human in the loop where?
       placeholder: |
-        Copilot coding agent handled issue triage: it reads new issues, applies track labels, sets the
+        Copilot coding agent handled issue triage: it reads new issues, applies theme labels, sets the
         project Status field, and drafts acceptance criteria. We review its suggestions in a PR before merge.
     validations:
       required: true
