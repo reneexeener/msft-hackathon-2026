@@ -1,0 +1,59 @@
+name: 🔨 Team task
+description: A piece of work your team is tracking during the hackathon. Optional — use it if you're tracking here.
+title: "[Task] "
+labels: ["type: team-task"]
+projects: ["reneexeener/59"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for the day-to-day work items your team is running.
+
+        Only worth using if your team is happy tracking work in this shared repo — everything here is
+        visible to the other teams. If you'd rather keep your work private, track it in your own repo
+        and just submit the idea and final submission issues here.
+
+  - type: input
+    id: team
+    attributes:
+      label: Team name
+      placeholder: Team Octocat
+    validations:
+      required: true
+
+  - type: input
+    id: parent
+    attributes:
+      label: Related idea or submission issue
+      description: Link the idea this task belongs to, e.g. `#12`.
+      placeholder: "#12"
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What needs doing?
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: How will you know it's done?
+      description: A checklist works well here.
+      placeholder: |
+        - [ ] Webhook receives `issues.opened` events
+        - [ ] Label is applied within 10 seconds
+        - [ ] Failure path logs to the Action summary
+    validations:
+      required: false
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Rough effort
+      options:
+        - S — a few hours
+        - M — one hackathon day
+        - L — full hackathon
+    validations:
+      required: false

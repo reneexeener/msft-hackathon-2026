@@ -1,0 +1,125 @@
+name: 🏁 Final project submission
+description: Submit your team's finished hackathon project for judging.
+title: "[Submission] "
+labels: ["type: project-submission", "needs: triage"]
+projects: ["reneexeener/59"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Congratulations on shipping! 🚀
+
+        Open **one** submission issue per team. Submit before the deadline even if you're still polishing —
+        you can keep editing the issue until judging starts.
+
+  - type: input
+    id: team
+    attributes:
+      label: Team name
+      placeholder: Team Octocat
+    validations:
+      required: true
+
+  - type: input
+    id: members
+    attributes:
+      label: Team members
+      description: GitHub handles, comma separated.
+      placeholder: "@octocat, @monalisa, @hubot"
+    validations:
+      required: true
+
+  - type: input
+    id: idea_issue
+    attributes:
+      label: Which idea did you build?
+      description: Link the original idea issue, e.g. `#12`. Write "new idea" if it never had one.
+      placeholder: "#12"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_it_does
+    attributes:
+      label: What did you build?
+      description: What it does and who it's for. Assume the judge has 60 seconds.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: track
+    attributes:
+      label: Track
+      options:
+        - Planning & tracking (Issues, Projects, milestones, roadmaps)
+        - Agentic workflows (Copilot coding agent, AI-assisted planning and triage)
+        - Automation (Actions, webhooks, bots, GraphQL API)
+        - Insights & metrics (dashboards, reporting, project analytics)
+        - Onboarding & docs (getting new contributors productive fast)
+        - Accessibility & inclusion (collaboration that works for everyone)
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: repo
+    attributes:
+      label: Code repository
+      description: Public link, or make sure the organizers have access to a private one.
+      placeholder: https://github.com/your-team/your-project
+    validations:
+      required: true
+
+  - type: input
+    id: demo
+    attributes:
+      label: Demo link
+      description: Deployed app, screen recording, or slides. Put "see README" if it's in the repo.
+      placeholder: https://youtu.be/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: agentic
+    attributes:
+      label: How did agents do the work?
+      description: |
+        This is the heart of the challenge, so be specific. Which agent or model, doing what,
+        with a human in the loop where?
+      placeholder: |
+        Copilot coding agent handled issue triage: it reads new issues, applies track labels, sets the
+        project Status field, and drafts acceptance criteria. We review its suggestions in a PR before merge.
+    validations:
+      required: true
+
+  - type: textarea
+    id: how_we_collaborated
+    attributes:
+      label: How did your team plan and track the work?
+      description: |
+        Show your working — this is scored. Which board did you use, how did you slice the work,
+        what did you change mid-hackathon?
+    validations:
+      required: true
+
+  - type: textarea
+    id: learned
+    attributes:
+      label: What surprised you?
+      description: What went wrong, what you'd redo, where the agent helped or got in the way. Honesty scores well.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission checklist
+      options:
+        - label: Organizers can access the code repository (public, or we've invited them).
+          required: true
+        - label: The repo has a README that explains how to run the project.
+          required: true
+        - label: The demo link works for someone outside our team.
+          required: true
+        - label: We linked the original idea issue above.
+          required: true

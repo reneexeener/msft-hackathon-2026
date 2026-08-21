@@ -1,0 +1,112 @@
+name: 💡 Challenge idea
+description: Propose an idea for the hackathon challenge. Every participant submits at least one.
+title: "[Idea] "
+labels: ["type: idea", "needs: triage"]
+projects: ["reneexeener/59"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting an idea! 🎉
+
+        **Challenge:** *Collaboration using GitHub Planning & Tracking Tools in the Agentic Age.*
+
+        Don't overthink it — a rough idea is genuinely useful. Organizers triage new ideas onto the
+        [Ideas & Submissions board](https://github.com/users/reneexeener/projects/59), and other teams
+        may adopt an idea you don't have time to build yourself.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: The idea in one or two sentences
+      description: If you can't explain it briefly yet, write what you have — you can edit this issue later.
+      placeholder: A bot that turns a messy brainstorming thread into a set of well-scoped issues with estimates.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does it solve?
+      description: Who is frustrated today, and why? Concrete beats abstract.
+      placeholder: |
+        After a planning meeting someone has to manually turn notes into issues. It takes ~30 minutes,
+        it gets skipped when people are busy, and the issues that do get written are inconsistent.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: track
+    attributes:
+      label: Track
+      description: Which theme does this fit best? Pick the closest — organizers can adjust it.
+      options:
+        - Planning & tracking (Issues, Projects, milestones, roadmaps)
+        - Agentic workflows (Copilot coding agent, AI-assisted planning and triage)
+        - Automation (Actions, webhooks, bots, GraphQL API)
+        - Insights & metrics (dashboards, reporting, project analytics)
+        - Onboarding & docs (getting new contributors productive fast)
+        - Accessibility & inclusion (collaboration that works for everyone)
+        - Other / not sure yet
+    validations:
+      required: true
+
+  - type: textarea
+    id: agentic_angle
+    attributes:
+      label: Where does the "agentic" part come in?
+      description: |
+        The challenge is about the *agentic age*, so tell us where an AI agent does real work.
+        It's fine to answer "not sure yet" — say so and we'll help you shape it.
+      placeholder: |
+        Copilot reads the discussion thread, drafts issues with acceptance criteria, assigns a track
+        label, and opens a draft PR for the ones that are mechanical. A human approves before anything merges.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Rough effort
+      description: A gut feeling is fine — this only helps teams pick something realistic.
+      options:
+        - S — a few hours
+        - M — one hackathon day
+        - L — full hackathon
+        - No idea yet
+    validations:
+      required: true
+
+  - type: dropdown
+    id: availability
+    attributes:
+      label: Are you planning to build this yourself?
+      options:
+        - "Yes — my team is claiming it"
+        - "No — I'm donating it, any team may take it"
+        - "Maybe — happy to team up with someone"
+    validations:
+      required: true
+
+  - type: input
+    id: team
+    attributes:
+      label: Team name
+      description: If you have one yet. Leave blank if you're still solo or forming a team.
+      placeholder: Team Octocat
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+      description: Sketches, links, prior art, related issues, or a rough shape of the demo.
+
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched [existing ideas](https://github.com/reneexeener/msft-hackathon-2026/issues?q=is%3Aissue+label%3A%22type%3A+idea%22) and this isn't a duplicate (if it's close to another idea, link it — that's useful too).
+          required: true
+        - label: I understand this idea is visible to every hackathon participant, and another team may build it if I don't claim it.
+          required: true

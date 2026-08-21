@@ -1,0 +1,36 @@
+name: Add new issues to the project board
+
+on:
+  issues:
+    types: [opened, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  add-to-project:
+    name: Add issue to Ideas & Submissions board
+    runs-on: ubuntu-latest
+    steps:
+      # Issue forms can add issues to the board on their own, but only when the author has
+      # write access to the project. Most participants won't, so this workflow is the safety net.
+      # It no-ops quietly until an organizer adds the ADD_TO_PROJECT_PAT secret.
+      # Setup instructions: docs/organizer-setup.md
+      - name: Check whether the project token is configured
+        id: guard
+        env:
+          PAT: ${{ secrets.ADD_TO_PROJECT_PAT }}
+        run: |
+          if [ -n "$PAT" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::ADD_TO_PROJECT_PAT is not set - skipping. Organizers can triage manually, or see docs/organizer-setup.md."
+          fi
+
+      - name: Add to project
+        if: steps.guard.outputs.ready == 'true'
+        uses: actions/add-to-project@v1.0.2
+        with:
+          project-url: https://github.com/users/reneexeener/projects/59
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}

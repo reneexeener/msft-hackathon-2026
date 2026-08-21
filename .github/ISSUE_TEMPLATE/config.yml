@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📋 Ideas & Submissions project board
+    url: https://github.com/users/reneexeener/projects/59
+    about: See every idea submitted so far, and what other teams are working on.
+  - name: 💬 Ask a question / discuss with other teams
+    url: https://github.com/reneexeener/msft-hackathon-2026/discussions
+    about: Not sure if your idea fits the challenge? Ask here before opening an issue.
+  - name: 📚 New to GitHub Issues and Projects?
+    url: https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects
+    about: A five-minute primer on Issues, Projects, and how they fit together.
