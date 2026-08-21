@@ -64,14 +64,11 @@ gh api repos/reneexeener/msft-hackathon-2026/milestones -f title="Idea submissio
 gh api repos/reneexeener/msft-hackathon-2026/milestones -f title="Final project submission" -f due_on="2026-03-14T16:00:00Z"
 ```
 
-### 4. Enable Discussions (optional)
+### 4. Seed a Discussion category (optional)
 
-`.github/ISSUE_TEMPLATE/config.yml` links to Discussions as the place for "is this a good idea?"
-questions. Either enable it or remove that link:
-
-```bash
-gh api -X PATCH repos/reneexeener/msft-hackathon-2026 -F has_discussions=true
-```
+Discussions is already enabled, and `.github/ISSUE_TEMPLATE/config.yml` links to it as the place for
+"is this a good idea?" questions. Consider opening a pinned welcome thread so the tab isn't empty when
+participants arrive — an empty Discussions tab reads as "nobody is here".
 
 ### 5. Tidy up the example issues
 
